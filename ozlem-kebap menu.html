@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Özlem Kebab Menü</title>
+<style>
+body {margin:0; font-family:Arial,sans-serif; background:#f7f4ef; padding:20px;}
+h1{text-align:center; color:#8b4513;}
+.menu-section {display:none; margin-top:20px;}
+.menu-item {background:white; border-radius:12px; padding:15px; margin-bottom:22px; box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+.menu-item img {width:100%; height:160px; object-fit:cover; border-radius:10px;}
+.name-price {margin-top:10px; display:flex; justify-content:space-between; font-size:20px; font-weight:bold; color:#8b4513;}
+.button {display:block; text-align:center; padding:12px; background:#8b4513; color:white; border-radius:10px; text-decoration:none; font-size:18px; margin:10px auto;}
+.button:hover{background:#a0612f;}
+.category-box {margin:10px 0; padding:15px; background:white; border-radius:12px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+.category-box a{color:#8b4513; font-size:20px; text-decoration:none;}
+.category-box a:hover{color:#a0612f;}
+</style>
+</head>
+<body>
+
+<h1>Özlem Kebab</h1>
+
+<!-- Ana Sayfa Kategorileri -->
+<div id="home">
+  <div class="category-box"><a href="#" onclick="showSection('corba')">🍲 Çorbalar</a></div>
+  <div class="category-box"><a href="#" onclick="showSection('doner')">🥙 Dönerler</a></div>
+  <div class="category-box"><a href="#" onclick="showSection('icecek')">🥤 İçecekler</a></div>
+</div>
+
+<!-- Çorba Menüsü -->
+<div id="corba" class="menu-section">
+  <h1>🍲 Çorbalar</h1>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1613470207927-9bba7f2d9965" alt="Paça Çorbası">
+    <div class="name-price"><span>Paça</span><span>250 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1625940677598-a285a1f600c0" alt="İşkembe Çorbası">
+    <div class="name-price"><span>İşkembe</span><span>175 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1617093727343-378e3c9e2b13" alt="Tavuk Çorbası">
+    <div class="name-price"><span>Tavuk</span><span>100 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1604908177522-a1640e2f32c9" alt="Mercimek Çorbası">
+    <div class="name-price"><span>Mercimek</span><span>100 TL</span></div>
+  </div>
+  <a href="#" class="button" onclick="showSection('home')">← Ana Sayfa</a>
+</div>
+
+<!-- Döner Menüsü -->
+<div id="doner" class="menu-section">
+  <h1>🥙 Dönerler</h1>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1603052875451-8d7a18c2a3e2" alt="Yarım Et Döner">
+    <div class="name-price"><span>Yarım Et Döner</span><span>200 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1606755962773-0c4b90b5b3f7" alt="Yarım Tavuk Döner">
+    <div class="name-price"><span>Yarım Tavuk Döner</span><span>70 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1613470207927-9bba7f2d9965" alt="Pilav Üstü Et">
+    <div class="name-price"><span>Pilav Üstü Et</span><span>450 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1617196034678-cf4933ea39d4" alt="Pilav Üstü Tavuk">
+    <div class="name-price"><span>Pilav Üstü Tavuk</span><span>200 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1606491956689-2f8a8b3471a7" alt="Pilav Üstü Kuru">
+    <div class="name-price"><span>Pilav Üstü Kuru</span><span>175 TL</span></div>
+  </div>
+  <a href="#" class="button" onclick="showSection('home')">← Ana Sayfa</a>
+</div>
+
+<!-- İçecek Menüsü -->
+<div id="icecek" class="menu-section">
+  <h1>🥤 İçecekler</h1>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1580934475452-0b3c9b2e5f9c" alt="Kola">
+    <div class="name-price"><span>Kola</span><span>40 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1622804566781-3d8b607c5a85" alt="Küçük Ayran">
+    <div class="name-price"><span>Küçük Ayran</span><span>20 TL</span></div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6bfb" alt="Su">
+    <div class="name-price"><span>Su</span><span>10 TL</span></div>
+  </div>
+  <a href="#" class="button" onclick="showSection('home')">← Ana Sayfa</a>
+</div>
+
+<script>
+function showSection(sectionId) {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('corba').style.display = 'none';
+  document.getElementById('doner').style.display = 'none';
+  document.getElementById('icecek').style.display = 'none';
+  document.getElementById(sectionId).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
